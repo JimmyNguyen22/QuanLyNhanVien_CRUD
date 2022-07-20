@@ -15,7 +15,7 @@ function checkName(value, selectorError, name) {
     return true;
   }
   document.querySelector(selectorError).innerHTML =
-    name + " phải là chữ, không để trống";
+    name + " viết không dấu, không để trống";
   return false;
 }
 

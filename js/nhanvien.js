@@ -192,3 +192,33 @@ window.onload = function () {
     taoBang(arrNhanVien);
   }
 };
+
+// tìm nhan viên theo tài khoản
+// document.querySelector("#btnTimNV").onclick = function () {
+//   let timNhanVien = Number(document.querySelector("#searchName").value);
+//   let nhanVienSearch = arrNhanVien.filter((value) => {
+//     return value.taiKhoan.includes(timNhanVien);
+//   });
+//   taoBang(nhanVienSearch);
+// };
+
+// document.querySelector("#btnTimNV").onclick = function () {
+//   let timNhanVien = document.querySelector("#searchName").value;
+//   let nhanVienSearch = arrNhanVien.filter((value) => {
+//     return value.hoTen.toUpperCase().includes(timNhanVien.toUpperCase());
+//   });
+//   taoBang(nhanVienSearch);
+// };
+
+// Tìm nhân viên theo xếp loại
+
+document.querySelector("#btnTimNV").onclick = function () {
+  let timNhanVien = document.querySelector("#searchName").value;
+  let nhanVienSearch = arrNhanVien.filter((value) => {
+    return value
+      .xepLoaiNhanVien()
+      .toUpperCase()
+      .includes(timNhanVien.toUpperCase());
+  });
+  taoBang(nhanVienSearch);
+};
