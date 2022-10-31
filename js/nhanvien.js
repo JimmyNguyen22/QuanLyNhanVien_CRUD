@@ -84,11 +84,11 @@ function taoBang(arrnv) {
             <th>${staff.chucVu}</th>
             <th>${staff.tongLuong()}</th>
             <th>${staff.xepLoaiNhanVien()}</th>
-            <th>
-            <button class="btn btn-danger" onclick="xoaNhanVien('${
+            <th class='d-flex gap-5'>
+            <button class="btn btn-danger mr-2" onclick="xoaNhanVien('${
               staff.taiKhoan
             }')">Xóa</button>
-            <button class="btn btn-primary ml-2 " data-toggle="modal" data-target="#myModal" onclick="suaNhanVien('${
+            <button class="btn btn-primary " data-toggle="modal" data-target="#myModal" onclick="suaNhanVien('${
               staff.taiKhoan
             }')">Sửa</button>
             </th>

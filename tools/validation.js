@@ -10,13 +10,19 @@ function checkLength(value, selectorError, name, min, max) {
 
 function checkName(value, selectorError, name) {
   let regexLetter = /^[a-z]+$/i;
-  if (regexLetter.test(value)) {
-    document.querySelector(selectorError).innerHTML = "";
-    return true;
+  // if (regexLetter.test(value)) {
+  //   document.querySelector(selectorError).innerHTML = "";
+  //   return true;
+  // }
+  // document.querySelector(selectorError).innerHTML =
+  //   name + " viết không dấu, không để trống";
+  // return false;
+  if (value.trim() === "") {
+    document.querySelector(selectorError).innerHTML = name + " không để trống";
+    return false;
   }
-  document.querySelector(selectorError).innerHTML =
-    name + " viết không dấu, không để trống";
-  return false;
+  document.querySelector(selectorError).innerHTML = "";
+  return true;
 }
 
 function checkEmail(value, selectorError, name) {
